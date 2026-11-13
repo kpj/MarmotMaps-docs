@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marmot Maps — Minimalist Offline GPX Trail Viewer for iPhone</title>
+  <meta name="description" content="Visualize GPX hiking trails, scrub interactive elevation profiles, track on-trail progress, and cache topographic maps offline—with zero accounts or tracking.">
+  <style>
+    :root {
+      --bg: #f6f8f6;
+      --card: #ffffff;
+      --text: #142019;
+      --muted: #526358;
+      --accent: #1b5e3a;
+      --accent-light: #e6f2eb;
+      --border: #dce5df;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1510;
+        --card: #15211a;
+        --text: #edf3ef;
+        --muted: #9cb0a3;
+        --accent: #4cc382;
+        --accent-light: #1c3527;
+        --border: #25382d;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 40px 20px 64px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 48px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    nav a:hover { color: var(--accent); }
+    .hero {
+      padding: 36px 32px;
+      border-radius: 20px;
+      background: linear-gradient(145deg, #1b5e3a, #0f3822);
+      color: #ffffff;
+      margin-bottom: 36px;
+      box-shadow: 0 12px 30px rgba(15, 56, 34, 0.18);
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: rgba(255, 255, 255, 0.16);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(1.9rem, 4vw, 2.5rem);
+      line-height: 1.18;
+      letter-spacing: -0.03em;
+    }
+    .hero p {
+      margin: 0;
+      font-size: 1.08rem;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 620px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-bottom: 40px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+    }
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+      letter-spacing: -0.01em;
+    }
+    .card p {
+      margin: 0;
+      font-size: 0.94rem;
+      color: var(--muted);
+    }
+    .disclaimer {
+      background: var(--accent-light);
+      border-radius: 14px;
+      padding: 16px 20px;
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 36px;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      font-size: 0.88rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a class="brand" href="index.html">Marmot Maps</a>
+      <nav>
+        <a href="index.html">Overview</a>
+        <a href="support.html">Support &amp; FAQ</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <span class="badge">iOS • Free • No Sign-Up • Zero Tracking</span>
+      <h1>Your GPX trails, fast and offline in the backcountry.</h1>
+      <p>Point Marmot Maps at any folder of GPX files in iOS Files or iCloud Drive. Inspect interactive elevation profiles, monitor live trail progress, and hike with zero clutter.</p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Folder-First GPX Library</h2>
+        <p>Load an entire folder of GPX tracks and waypoints at once—or open individual <code>.gpx</code> files directly from Files, AirDrop, or Safari.</p>
+      </div>
+      <div class="card">
+        <h2>Interactive Elevation Profiles</h2>
+        <p>Scrub and pinch-to-zoom elevation charts with synchronized map markers, elevation-colored trail gradients, and Naismith's Rule pace estimates.</p>
+      </div>
+      <div class="card">
+        <h2>Live On-Trail Status</h2>
+        <p>See completion percentage, remaining distance and climb, compass heading, and off-trail distance warnings at a glance.</p>
+      </div>
+      <div class="card">
+        <h2>Offline Maps &amp; Power Save</h2>
+        <p>Cache tiles for offline mountain travel with Stadia Maps, Thunderforest, or custom HTTPS servers, and extend battery life with Power Save Mode.</p>
+      </div>
+      <div class="card">
+        <h2>Built-In Sample Trails</h2>
+        <p>Explore Alpine sample trails right out of the box before importing your own routes.</p>
+      </div>
+      <div class="card">
+        <h2>100% Private by Design</h2>
+        <p>No accounts, no analytics SDKs, no ads, and no cloud uploads. Your GPX routes and GPS location stay strictly on your iPhone.</p>
+      </div>
+    </section>
+
+    <div class="disclaimer">
+      <strong>Backcountry Safety Notice:</strong> Trail routes, elevation profiles, duration estimates, and GPS positions are provided for informational reference only and can be incomplete or inaccurate. Always carry backup navigation and exercise sound judgment outdoors.
+    </div>
+
+    <footer>
+      <span>&copy; 2026 Kim Philipp Jablonski</span>
+      <span>
+        <a href="privacy.html">Privacy Policy</a> &middot;
+        <a href="support.html">Support</a> &middot;
+        <a href="mailto:kim.philipp.jablonski@gmail.com">Contact</a>
+      </span>
+    </footer>
+  </div>
+</body>
+</html>

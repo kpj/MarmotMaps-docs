@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support &amp; FAQ — Marmot Maps</title>
+  <style>
+    :root {
+      --bg: #f6f8f6;
+      --card: #ffffff;
+      --text: #142019;
+      --muted: #526358;
+      --accent: #1b5e3a;
+      --border: #dce5df;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1510;
+        --card: #15211a;
+        --text: #edf3ef;
+        --muted: #9cb0a3;
+        --accent: #4cc382;
+        --border: #25382d;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 20px 64px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 36px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    nav a:hover { color: var(--accent); }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px 32px;
+      margin-bottom: 22px;
+    }
+    h1 { margin-top: 0; letter-spacing: -0.02em; }
+    h2 { margin-top: 0; font-size: 1.15rem; }
+    h3 { margin: 22px 0 6px; font-size: 1.02rem; }
+    p { margin: 0 0 12px; font-size: 0.96rem; }
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      background: var(--accent);
+      color: #ffffff;
+    }
+    .btn.secondary {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--border);
+    }
+    a { color: var(--accent); }
+    footer {
+      margin-top: 36px;
+      font-size: 0.88rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a class="brand" href="index.html">Marmot Maps</a>
+      <nav>
+        <a href="index.html">Overview</a>
+        <a href="support.html">Support &amp; FAQ</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </nav>
+    </header>
+
+    <div class="card">
+      <h1>Support &amp; Feedback</h1>
+      <p>Need help with Marmot Maps, spotted a GPX file that won't parse cleanly, or have a feature request? Reach out directly by email or open an issue on GitHub.</p>
+      <div class="actions">
+        <a class="btn" href="mailto:kim.philipp.jablonski@gmail.com?subject=Marmot%20Maps%20Support">Email Support</a>
+        <a class="btn secondary" href="https://github.com/kpj/MarmotMaps-docs/issues" rel="noopener">Open a GitHub Issue</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>How do I load GPX trails into Marmot Maps?</h3>
+      <p>Tap <strong>Select Folder</strong> on the welcome card (or <strong>Options &rarr; Select GPX Folder</strong>) and choose any folder in iOS Files or iCloud Drive containing <code>.gpx</code> files. Every GPX file in that folder appears as an interactive trail on the map. You can also open individual <code>.gpx</code> files directly from the iOS Share Sheet or Files app, or tap <strong>Try Sample Trails</strong> to explore the built-in Alpine routes first.</p>
+
+      <h3>Why is bulk offline downloading disabled for OpenStreetMap and OpenTopoMap?</h3>
+      <p>OpenStreetMap's volunteer-run tile servers and OpenTopoMap prohibit bulk automated tile prefetching in their usage policies. Tiles you browse while online are still cached automatically on your iPhone. To prefetch complete offline trail corridors ahead of a trip, select <strong>Stadia Maps</strong> or <strong>Thunderforest</strong> (with your free personal API key in Options) or enter a <strong>Custom Tile Provider</strong> HTTPS URL, then tap the download icon on a trail or in Options.</p>
+
+      <h3>How does elevation chart scrubbing work?</h3>
+      <p>Tap any trail marker or polyline on the map to open its detail sheet. Drag one finger across the elevation chart to inspect exact distance, altitude, and remaining time to any point along the route—a synchronized flag marker moves live on the map. Pinch with two fingers to zoom into steep sections.</p>
+
+      <h3>How are estimated hiking durations calculated?</h3>
+      <p>Marmot Maps combines your configurable flat-ground walking pace (adjustable from 2.0 to 6.0 km/h in <strong>Options &rarr; Hiking Pace</strong>) with <strong>Naismith's Rule</strong>, adding 10 minutes for every 100 meters of cumulative elevation gain.</p>
+
+      <h3>What does Power Save Mode do?</h3>
+      <p>Enabling <strong>Power Save Mode</strong> in Options reduces GPS polling sensitivity, pauses continuous compass heading updates, and disables haptic feedback while maintaining accurate (~10 m) on-trail progress tracking for long backcountry days.</p>
+    </div>
+
+    <footer>
+      &copy; 2026 Kim Philipp Jablonski &middot; <a href="privacy.html">Privacy Policy</a>
+    </footer>
+  </div>
+</body>
+</html>

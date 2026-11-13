@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Marmot Maps</title>
+  <style>
+    :root {
+      --bg: #f6f8f6;
+      --card: #ffffff;
+      --text: #142019;
+      --muted: #526358;
+      --accent: #1b5e3a;
+      --border: #dce5df;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1510;
+        --card: #15211a;
+        --text: #edf3ef;
+        --muted: #9cb0a3;
+        --accent: #4cc382;
+        --border: #25382d;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 20px 64px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 36px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    nav a:hover { color: var(--accent); }
+    main {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 32px;
+    }
+    h1 { margin-top: 0; letter-spacing: -0.02em; }
+    h2 { margin-top: 28px; font-size: 1.15rem; }
+    p, li { color: var(--text); font-size: 0.97rem; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; }
+    a { color: var(--accent); }
+    footer {
+      margin-top: 36px;
+      font-size: 0.88rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a class="brand" href="index.html">Marmot Maps</a>
+      <nav>
+        <a href="index.html">Overview</a>
+        <a href="support.html">Support &amp; FAQ</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Effective Date: November 12, 2026</p>
+
+      <p><strong>Marmot Maps</strong> is built to respect your privacy. The developer (Kim Philipp Jablonski) does not operate backend servers for the app and does <strong>not</strong> collect, store, rent, or sell any personal data.</p>
+
+      <h2>1. No Analytics, Tracking, or Accounts</h2>
+      <p>Marmot Maps requires no registration or user account. The app contains zero third-party analytics SDKs, advertising frameworks, crash-reporting trackers, or cross-app tracking technologies.</p>
+
+      <h2>2. Location Data (Processed On-Device Only)</h2>
+      <p>If you grant Location Services permission ("While Using the App"), Marmot Maps uses your iPhone's GPS and compass readings solely on your device in real time to display your position on the map, compute your progress along loaded GPX trails, and estimate remaining hiking duration.</p>
+      <ul>
+        <li>Your GPS coordinates and movement history are <strong>never</strong> recorded to external servers or transmitted to the developer.</li>
+        <li>Location updates automatically stop when Marmot Maps moves to the background.</li>
+        <li>If you explicitly tap the <em>Directions</em> button to navigate to a trailhead, the trailhead's destination coordinates are handed off locally on your device to Apple Maps or Google Maps.</li>
+      </ul>
+
+      <h2>3. GPX Files &amp; Local Storage</h2>
+      <p>GPX trail files and folders you open via the iOS Files picker remain on your device (or in your own iCloud Drive folder via standard iOS security-scoped bookmarks). Marmot Maps parses these files locally on your device and never transmits your GPX files over the network.</p>
+      <p>App preferences (such as unit system, trail color, and hiking pace) are saved locally on your device using iOS <code>UserDefaults</code>. Any optional third-party map API keys you enter are stored locally in the encrypted iOS Keychain.</p>
+
+      <h2>4. Third-Party Map Tile Providers</h2>
+      <p>To display background maps when online or when downloading offline map tiles, your device sends standard HTTPS tile requests (containing <code>{z}/{x}/{y}</code> map tile coordinates, your IP address, and an application <code>User-Agent</code> header) directly to the map tile provider you select in Options:</p>
+      <ul>
+        <li><a href="https://osmfoundation.org/wiki/Privacy_Policy" rel="noopener">OpenStreetMap Foundation Privacy Policy</a></li>
+        <li><a href="https://opentopomap.org/about" rel="noopener">OpenTopoMap Information &amp; Policy</a></li>
+        <li><a href="https://stadiamaps.com/privacy-policy/" rel="noopener">Stadia Maps Privacy Policy</a> (if selected with your API key)</li>
+        <li><a href="https://www.thunderforest.com/privacy/" rel="noopener">Thunderforest Privacy Policy</a> (if selected with your API key)</li>
+        <li>Your own custom HTTPS tile server, if configured by you in Options.</li>
+      </ul>
+      <p>When <strong>Offline Mode</strong> is enabled in Options, Marmot Maps makes no network tile requests and reads exclusively from tiles already cached on your device.</p>
+
+      <h2>5. Children's Privacy</h2>
+      <p>Marmot Maps does not knowingly collect personal information from anyone, including children under the age of 13.</p>
+
+      <h2>6. Changes to This Policy</h2>
+      <p>If future versions of Marmot Maps introduce features that affect this Privacy Policy, updates will be published at this URL with a revised effective date.</p>
+
+      <h2>7. Contact</h2>
+      <p>If you have any questions about this Privacy Policy, please contact:<br>
+      Kim Philipp Jablonski — <a href="mailto:kim.philipp.jablonski@gmail.com">kim.philipp.jablonski@gmail.com</a></p>
+    </main>
+
+    <footer>
+      &copy; 2026 Kim Philipp Jablonski &middot; <a href="index.html">Marmot Maps</a>
+    </footer>
+  </div>
+</body>
+</html>
